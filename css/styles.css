@@ -1,0 +1,605 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/Fondo-pizarra-min.jpg);
+    background-size: contain;
+    font-family: 'Lobster', cursive;
+}
+
+.contenedor {
+    width: 74%;
+    margin: auto;
+}
+
+.hidden {
+    width: 100%;
+    box-shadow: 0 0 60px 120px rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+
+nav {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.logo {
+    height: 100%;
+    margin-left: 5px;
+}
+
+.logo img {
+    height: 100%;
+}
+
+nav .enlaces {
+    display: flex;
+}
+
+.enlaces .enlace {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.enlaces .enlace::before {
+    color: white;
+    content: "·";
+    margin-right: 15px;
+    display: inline-block;
+
+}
+
+.enlaces .enlace:first-child::before {
+    display: none;
+}
+
+nav .enlace a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.enlace a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.hamburguesa {
+    height: 100%;
+    width: 70px;
+    text-align: right;
+    color: white;
+    display: none;
+}
+
+.hamburguesa i {
+    vertical-align: top;
+    padding: 0 5px 25px 25px;
+    font-size: 2em;
+}
+
+.paellas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paellas > p {
+    margin: auto;
+    padding: 130px 0 5px 0;
+    text-align: center;
+    font-size: 28px;
+    color: orange;
+    width: 500px;
+}
+
+.cont-paellas {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    margin: auto;
+}
+
+.paella {
+    text-align: center;
+    width: 30%;
+    
+}
+
+.paella:nth-child(2) {
+    width: 40%;
+}
+
+.paella img {
+    width: 100%;
+    transition: all 0.2s ease-in-out;
+}
+
+.paella img:hover {
+    transform: scale(1.16) rotate(20deg);
+}
+
+.paella p {
+    color: white;
+    font-size: 28px;
+    text-shadow: 3px 5px 10px black;
+}
+
+.paella a {
+    text-decoration: none;
+}
+
+.paellas > a {
+    margin: 30px auto;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 22px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 10px 30px 12px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.paellas > a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.carta {
+    width: 100%;
+    position: relative;
+}
+
+.carta img {
+    width: 100%;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    box-shadow: inset 0 0 15px black;
+}
+
+.carta a {
+    position: absolute;
+    top: 780px;
+    left: 450px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 10px 30px 12px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+}
+
+.carta a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.almuerzo p {
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    padding: 60px 0 20px 0;
+}
+
+.almuerzo .description {
+    font-size: 1.25em;
+    text-shadow: none;
+    padding: 0 0 15px;
+}
+
+.galeria {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.galeria picture {
+    width: 24%;
+    height: 250px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 4px solid white;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.galeria picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.almuerzo .botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.almuerzo .botones a {
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+    width: fit-content;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 5px 30px 10px;
+    border-radius: 8px;
+    margin: 10px 5px 0 5px;
+    margin-bottom: 60px;
+    transition: all 0.1s ease-in-out;
+}
+
+.almuerzo a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.eventos {
+    /* background-image: url(../img/salon.jpg);
+    background-size: cover;
+    height: 650px; */
+    position: relative;
+}
+
+.eventos img {
+    width: 100%;
+}
+
+.eventos p {
+    position: absolute;
+    top: 320px;
+    left: 175px;
+    width: 400px;
+    color: white;
+    font-size: 28px;
+    text-shadow: 0 0 8px black;
+}
+
+.eventos a {
+    display: block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    width: fit-content;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
+    padding: 5px 20px 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-shadow: none;
+    box-shadow: 0 0 12px black;
+    transition: all 0.1s ease-in-out;
+}
+
+.eventos a:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+footer * {
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FDFFFC;
+    flex-direction: column;
+}
+
+footer a {
+    text-decoration: none;
+    color: #011627;
+}
+
+footer .iconos {
+    margin: auto;
+}
+
+.iconos i{
+    margin: 30px 20px 30px 0;
+    font-size: 30px;
+}
+
+.fa-whatsapp {
+    color: #73D987;
+}
+
+.fa-facebook-messenger {
+    color: #418CF5;
+}
+
+.fa-facebook {
+ color: #4064AD;
+}
+
+.fa-instagram {
+ color: #E0204B;
+}
+
+.fa-twitter {
+ color: #1A91DA;
+}
+
+.fa-tripadvisor {
+    color: #32DA9D;
+}
+
+
+footer .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: #011627;
+    width: 400px;
+}
+
+.texto i {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.texto a {
+    margin-left: 8px;
+}
+
+.autor {
+    margin: auto;
+    margin-top: 30px;
+    padding: 8px 0px 15px 8px;
+    border-top: 1px solid #011627;
+    color: #011627;
+    text-align: center;
+    width: 20%;
+}
+
+.autor i {
+    color: #00171F;
+    font-size: 16px;
+}
+
+/* PAELLAS */
+
+.body-paellas {
+    background-size: cover;
+}
+
+.contenedor-paellas {
+    margin-bottom: 60px;
+}
+
+.cards-paellas {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 180px 0 30px;
+}
+
+.card-paella {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 28%;
+    height: 380px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.7);
+}
+
+.card-paella picture {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+}
+
+.card-paella picture img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-paella .texto {
+    position: absolute;
+    top: 200px;
+    padding: 10px;
+    color: #011627;
+    text-align: justify;
+}
+
+.card-paella h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.contenedor-paellas a {
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+    width: fit-content;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 5px 30px 10px;
+    border-radius: 8px;
+    margin: 20px auto;
+    margin-bottom: 60px;
+    transition: all 0.1s ease-in-out;
+}
+
+.contenedor-paellas a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* CARTA */
+
+.contenedor-carta {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 180px 0 0 0;
+}
+
+.contenedor-carta img {
+    width: 100%;
+    max-width: 612px;
+}
+
+.contenedor-carta a {
+    display: block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+    width: fit-content;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 5px 30px 10px;
+    border-radius: 8px;
+    margin: 20px auto;
+    margin-bottom: 60px;
+    transition: all 0.1s ease-in-out;
+}
+
+.contenedor-carta a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 1250px) {
+    .carta a {
+        top: 650px;
+        left: 350px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .carta a {
+        top: 550px;
+        left: 280px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .carta a {
+        top: 420px;
+        left: 230px;
+    }
+    .galeria picture {
+        width: 49%;
+    }  
+    .eventos p {
+        top: 100px;
+    }
+    footer .contenedor {
+        width: 100%;
+    }
+
+    .cards-paellas {
+        flex-wrap: wrap;
+    }
+    .card-paella {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    nav {
+        height: 150px;
+    }
+
+    .hamburguesa{
+        display: block;
+    }
+    .enlaces {
+        position: fixed;
+        background: rgb(13, 17, 20);
+        right: 0;
+        top: 70px;
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+    }
+    .enlaces .enlace::before {
+        content: "";
+    }
+    .enlace a {
+        display: block;
+    }
+    .enlaces2 {
+        transform: translateX(0%);
+    }
+
+    .paellas > p {
+        font-size: 18px;
+        width: 90%;
+    }
+    .cont-paellas {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .paella {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .paella:nth-child(2) {
+        width: 100%;
+    }
+    .carta a {
+        top: 170px;
+        left: 48px;
+    }
+    .galeria picture {
+        width: 49%;
+        height: 130px;
+    }
+    .eventos p {
+        top: 50px;
+        left: 20px;
+        width: 300px;
+        font-size: 22px;
+    }
+    footer .texto {
+        width: 300px;
+    }
+    
+    .card-paella {
+        width: 250px;
+    }
+}
